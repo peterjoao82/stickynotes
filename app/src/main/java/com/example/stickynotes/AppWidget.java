@@ -12,7 +12,7 @@ public class AppWidget extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
         for (int appWidgetId : appWidgetIds) {
-            Intent launchIntent = new Intent(context, MainActivity.class);
+            Intent launchIntent = new Intent(context, MainActivity2.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, launchIntent, PendingIntent.FLAG_IMMUTABLE);
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
             remoteViews.setOnClickPendingIntent(R.id.idTVWidget, pendingIntent);
